@@ -1,0 +1,3 @@
+D:/cpp_projects/proga/pr5/build/_deps/sfml-subbuild/CMakeFiles/sfml-populate.dir
+D:/cpp_projects/proga/pr5/build/_deps/sfml-subbuild/CMakeFiles/edit_cache.dir
+D:/cpp_projects/proga/pr5/build/_deps/sfml-subbuild/CMakeFiles/rebuild_cache.dir
