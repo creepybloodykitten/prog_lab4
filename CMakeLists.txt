@@ -40,3 +40,19 @@ target_compile_options(physics PRIVATE
         $<$<CXX_COMPILER_ID:MSVC>:/W4>
         $<$<NOT:$<CXX_COMPILER_ID:MSVC>>:-Wall -Wextra -Wpedantic>
         )
+
+install(TARGETS physics RUNTIME DESTINATION bin)
+
+if(${CMAKE_SYSTEM} MATCHES "Linux")
+    set(CPACK_GENERATOR DEB)
+else()
+    set(CPACK_GENERATOR ZIP)    
+endif()
+
+set(CPACK_PACKAGE_VERSION_MAJOR "${PROJECT_VERSION_MAJOR}")
+set(CPACK_PACKAGE_VERSION_MINOR "${PROJECT_VERSION_MINOR}")
+set(CPACK_PACKAGE_VERSION_PATCH "${PROJECT_VERSION_PATCH}")
+
+set(CPACK_PACKAGE_CONTACT example@example.com)
+
+include(CPack)
