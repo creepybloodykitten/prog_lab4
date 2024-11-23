@@ -34,7 +34,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          submodules: true
+          submodules: false
       - run: sudo apt-get update && sudo apt-get install libsfml-dev
       - run: cmake . -DPATCH_VERSION=${{ github.run_number }}
       - run: cmake --build .
@@ -58,7 +58,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          submodules: true
+          submodules: false
       - run: brew install sfml
       - run: cmake . -DPATCH_VERSION=${{ github.run_number }}
       - run: cmake --build .
